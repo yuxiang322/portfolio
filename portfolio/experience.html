@@ -1,0 +1,122 @@
+<section id="experience">
+    <div class="employment">
+        <h1>Employment History</h1>
+        <div class="experienceBlock">
+
+            <h2>ST Engineering</h2>
+            <p><i class="fa-regular fa-calendar"></i> August 2022 - February 2024</p>
+
+            <h3>Roles and Responsibilities</h3>
+            <p>Managing two projects</p>
+            <ul>
+                <li><strong>Documentation:</strong> Crafting detailed documentation and creating proof
+                    of concepts aligned with user requirements.</li>
+                <li><strong>Effort Estimation:</strong> Estimating effort sizing for seamless execution.</li>
+                <li><strong>Development:</strong> Performed development on staging servers and ensured robustness by
+                    testing
+                    concepts with users in UAT environments before final deployment to production.</li>
+                <li><strong>System Maintenance:</strong> Maintaining systems and addressing additional user requests.
+                </li>
+            </ul>
+
+            <p><strong>Project 1:</strong> Focused on leveraging ArcGIS commercial-off-the-shelf (COTS) solutions to
+                meet
+                user requirements. Utilized Python to integrate the ArcGIS API with internal servers for execution of
+                daily
+                and monthly batch jobs. Managed CSFTP servers and Meson MQ to facilitate streamlined file exchange with
+                external systems. Provided tailored solutions to address specific user requirements and enhance overall
+                system functionality.</p>
+
+
+            <p><strong>Project 2:</strong> Focused on Spring Batch development to streamline data transfer operations,
+                this project involved several key processes. Data was retrieved from an external system via SFTP and
+                encrypted using Slift classic encryption to ensure secure transmission. Once the data was securely
+                transferred, it was processed with Spring Batch and stored in an MSSQL database. For every transaction,
+                a validation file was generated and returned through scheduled batch jobs, ensuring efficient execution
+                that met all operational demands.</p>
+            
+            <h3>Project/Technical Manager: Annie</h3>
+            <button class="contactBtn" onclick="showContactForm('contactFormST')">Get Contacts</button>
+            <form id="contactFormST" class="contactForm" style="display:none;" method="POST"
+                action="https://porfoliorequestcontact.azurewebsites.net/api/httpTriggerContacts" onsubmit="return submitForm(this);">
+                <input type="hidden" name="managerName" value="Annie Ang" />
+                <input type="hidden" name="managerContact" value="9637 2260" />
+                <label for="nameST">Name: </label>
+                <input type="text" id="nameST" name="name"/>
+                <label for="emailST">Email: *</label>
+                <input type="email" id="emailST" name="email" required />
+                <label for="organizationST">Organization: *</label>
+                <input type="organization" id="organizationST" name="organization" required />
+                <label for="messageST">Message:</label>
+                <textarea id="messageST" name="message"></textarea>
+                <button type="submit">Submit</button>
+                <button type="button" onclick="hideContactForm('contactFormST')">Cancel</button>
+            </form>
+        </div>
+
+        <div class="experienceBlock">
+            <h2>Accenture</h2>
+            <p><i class="fa-regular fa-calendar"></i> August 2021 - August 2022</p>
+
+            <h3>Roles and Responsibilities</h3>
+            <p><strong>Accenture:</strong> Part of the SAP build team with responsibilities including:</p>
+            <ul>
+                <li><strong>Technical Build:</strong> Receiving functional designs and proceeding with the technical
+                    build
+                    based on these designs, development using SAP ABAP and SAP HANA.</li>
+                <li><strong>Languages Used:</strong> ABAP and SQL for backend-related builds.</li>
+                <li><strong>Build Components:</strong> Completing three key components: Technical Design Document, code,
+                    and
+                    Unit Test document.</li>
+                <li><strong>Exposure to Tools:</strong> Slight exposure to using JIRA for developement progress and
+                    defect
+                    management.</li>
+            </ul>
+
+            <h3>Manager: Annabelle</h3>
+            <button class="contactBtn" onclick="showContactForm('contactFormAccenture')">Get Contacts</button>
+            <form id="contactFormAccenture" class="contactForm" style="display:none;" method="POST"
+                action="https://porfoliorequestcontact.azurewebsites.net/api/httpTriggerContacts" onsubmit="return submitForm(this);">
+                <input type="hidden" name="managerName" value="Annabelle" />
+                <input type="hidden" name="managerContact" value="ann_g_yu@yahoo.com" />
+                <label for="nameAccenture">Name: </label>
+                <input type="text" id="nameAccenture" name="name"/>
+                <label for="emailAccenture">Email: *</label>
+                <input type="email" id="emailAccenture" name="email" required />
+                <label for="organizationAccenture">Organization: *</label>
+                <input type="organization" id="organizationAccenture" name="organization" required />
+                <label for="messageAccenture">Message:</label>
+                <textarea id="messageAccenture" name="message"></textarea>
+                <button type="submit">Submit</button>
+                <button type="button" onclick="hideContactForm('contactFormAccenture')">Cancel</button>
+            </form>
+        </div>
+
+        <section id="skills">
+            <div class="skills">
+                <h2>Skills</h2>
+
+                <div class="proficientSkills">
+                    <h3>Proficient Skills</h3>
+                    <ul>
+                        <li><strong>Programming Languages:</strong> Java, Python, SAP ABAP</li>
+                        <li><strong>Database Management:</strong> MSSQL</li>
+                        <li><strong>Frameworks and Technologies:</strong> Spring Batch, ArcGIS</li>
+                        <li><strong>Tools and Protocols:</strong> IIS, SFTP, (CA) Certificate Management, Slift</li>
+                    </ul>
+                </div>
+
+                <div class="familiarSkills">
+                    <h3>Familiar Skills</h3>
+                    <ul>
+                        <li><strong>Web Technologies:</strong> HTML, CSS, JavaScript</li>
+                        <li><strong>Programming Languages:</strong> C++, Ruby Script</li>
+                        <li><strong>Low-Code Platforms:</strong> Mendix</li>
+                        <li><strong>Tools and Platforms:</strong> Firebase, Azure</li>
+                        <li><strong>VM Setup and Security:</strong> Kali Linux, Wireshark</li>
+                        <li><strong>Management:</strong> JIRA, GanttChart, Project Management Lifecycle</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+</section>
