@@ -174,6 +174,47 @@ footer {
     margin-bottom: 10px;
 }
 
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    #introduction {
+        flex-direction: column; /* Stacks content vertically */
+        align-items: center;
+        padding: 15px;
+    }
+
+    .introContent {
+        margin-right: 0;
+        margin-bottom: 20px; /* Adds space between stacked elements */
+        min-width: 100%; /* Full width on smaller screens */
+    }
+
+    .personalInfo {
+        min-width: 100%; /* Full width for personal info on smaller screens */
+    }
+
+    #introduction h1 {
+        font-size: 2em; /* Slightly smaller heading for smaller screens */
+    }
+
+    #introduction p {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 576px) {
+    #introduction {
+        padding: 10px;
+    }
+
+    #introduction h1 {
+        font-size: 1.8em;
+    }
+
+    .personalInfo {
+        padding: 10px;
+    }
+}
+
 
 /* Experience */
 #experience {
