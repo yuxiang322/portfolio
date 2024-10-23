@@ -87,6 +87,43 @@ footer {
     margin-top: 10px;
 }
 
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar ul li a {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .footerContent {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar ul li a {
+        padding: 8px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    footer {
+        padding: 8px;
+    }
+}
 
 /*introduction*/
 #introduction {
