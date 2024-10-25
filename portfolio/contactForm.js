@@ -15,28 +15,6 @@ function hideContactForm(formId) {
     });
 }
 
-// function submitForm(form) {
-//     event.preventDefault();
-
-//     const formData = new FormData(form);
-//     const formDataEntries = new URLSearchParams(formData).toString();
-
-//     fetch(form.action, {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/x-www-form-urlencoded'
-//         },
-//         body: formDataEntries
-//     })
-//     .then(response => response.text())
-//     .then(data => {
-//         alert('Request sent successfully!');
-//         hideContactForm(form.id);
-//     })
-//     .catch(error => console.error('Error:', error));
-
-//     return false;
-// }
 function submitForm(form) {
     event.preventDefault();
 
@@ -48,6 +26,11 @@ function submitForm(form) {
         jsonData[key] = value;
     });
 
+     // Disable submit button
+     const submitButton = form.querySelector('button[type="submit"]');
+     submitButton.disabled = true;
+     submitButton.textContent = 'Submitting...';
+
     fetch(form.action, {
         method: 'POST',
         headers: {
@@ -56,15 +39,22 @@ function submitForm(form) {
         body: JSON.stringify(jsonData) 
     })
     .then(response => {
-        hideContactForm(form.id);
+        // Re-enable submit button
+        submitButton.disabled = false;
+        submitButton.textContent = 'Submit';
+
         if (response.ok) {
             alert('Form submitted successfully!');
+            hideContactForm(form.id);
         } else {
             alert('Form submission failed:', response.statusText);
             console.error('Form submission failed:', response.statusText);
         }
     })
     .catch(error => {
+        // Re-enable submit button
+        submitButton.disabled = false;
+        submitButton.textContent = 'Submit';
         console.error('Error:', error);
     });
 }
