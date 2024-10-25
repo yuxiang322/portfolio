@@ -56,9 +56,9 @@ function submitForm(form) {
         body: JSON.stringify(jsonData) 
     })
     .then(response => {
+        hideContactForm(form.id);
         if (response.ok) {
             alert('Form submitted successfully!');
-            hideContactForm(form.id);
         } else {
             alert('Form submission failed:', response.statusText);
             console.error('Form submission failed:', response.statusText);
