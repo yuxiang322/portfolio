@@ -57,8 +57,10 @@ function submitForm(form) {
     })
     .then(response => {
         if (response.ok) {
-            console.log('Form submitted successfully!');
+            alert('Form submitted successfully!');
+            hideContactForm(form.id);
         } else {
+            alert('Form submission failed:', response.statusText);
             console.error('Form submission failed:', response.statusText);
         }
     })
